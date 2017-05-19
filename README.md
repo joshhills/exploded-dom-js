@@ -7,8 +7,7 @@
 
 `npm install exploded-dom`
 
-## Demo
-TBD - There is one present in the repository.
+## [Demo](https://joshhills.github.io/exploded-dom-js)
 
 ## How to use?
 
