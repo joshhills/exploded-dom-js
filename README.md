@@ -1,5 +1,5 @@
 # exploded-dom-js
- A light-weight JavaScript library that adds simple, interactive 3D layering effects to HTML elements based on the cursor position.
+ A light-weight JavaScript glibrary that adds simple, interactive 3D layering effects to HTML elements based on the cursor position.
 
 ## How to include?
 
@@ -48,14 +48,14 @@ trigger
 
 Initialise takes an **object** containing options that affect how the DOM elements should appear and animate. They have sensible defaults, and there are also accessor methods.
 
-Field|Type|Description
----|---|---
-`parentsClass`|string|The class name identifying parent containers.
-`triggerClass`|string|The class name identifying triggers for mouse events to nested parents.
-`childClass`|string|The class name identifying children of parents.
-`maxPitch`|number|The maximum amount of vertical rotation in degrees to pitch a parent view.
-`maxYaw`|number|The maximum amount of horizontal rotation in degrees to pitch a parent view.
-`layerDepth`|number|The pixel value denoting the gap between layers (higher produces more extreme effect).
+Field|Type|Default|Description
+---|---|---|---
+`parentsClass`|string|`'ed-parent'`|The class name identifying parent containers.
+`triggerClass`|string|`'ed-trigger'`|The class name identifying triggers for mouse events to nested parents.
+`childClass`|string|`'ed-child'`|The class name identifying children of parents.
+`maxPitch`|number|`10`|The maximum amount of vertical rotation in degrees to pitch a parent view.
+`maxYaw`|number|`40`|The maximum amount of horizontal rotation in degrees to pitch a parent view.
+`layerDepth`|number|`20`|The pixel value denoting the gap between layers (higher produces more extreme effect).
 
 ### Other Useful Methods
 
