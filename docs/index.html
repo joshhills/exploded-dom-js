@@ -50,6 +50,13 @@
 
                 margin-bottom: 50px;
             }
+            .input-group {
+                display: inline-block;
+                margin-bottom: 2rem;
+            }
+            .input-group:not(:last-child) {
+                margin-right: 1rem;
+            }
             .ed-parent {
                 transform-origin: center center;
                 transform-style: preserve-3d;
@@ -171,6 +178,23 @@
                     </div>
                     </div>
                 </div>
+                <div class="inputs">
+                    <h2>
+                        Tweak me!
+                    </h2>
+                    <div class="input-group">
+                        <p>Max Pitch</p>
+                        <input type="range" id="maxPitch" value="20" min="0" max="360" onchange="ExplodedDOMJS.setMaxPitch(this.value)">
+                    </div>
+                    <div class="input-group">
+                        <p>Max Yaw</p>
+                        <input type="range" id="maxYaw" value="20" min="0" max="360" onchange="ExplodedDOMJS.setMaxYaw(this.value)">
+                    </div>
+                    <div class="input-group">
+                        <p>Layer Depth</p>
+                        <input type="range" id="layerDepth" value="20" min="0" max="100" onchange="ExplodedDOMJS.setLayerDepth(this.value)">
+                    </div>
+                </div>
                 <hr />
                 <h3>
                     A light-weight library that adds simple, interactive 3D layering effects to HTML elements based on the cursor position.
@@ -197,6 +221,7 @@
         <!-- Initialise -->
         <script>
             (function() {
+                // Start demo.
                 ExplodedDOMJS.initialise();
             })();
         </script>

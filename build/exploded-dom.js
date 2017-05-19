@@ -69,6 +69,10 @@ const ExplodedDOMJS = (function() {
             );
             
             this.element.style.transform = _newTransformRotateXY;
+            
+            Array.prototype.forEach.call(children, function(c) {
+                c.update();
+            });
         }
         this.getChildren = function() {
             return this.children;
@@ -92,7 +96,10 @@ const ExplodedDOMJS = (function() {
                 }
             }
         })();
-        this.element.style.transform = 'translate3d(0px,0px,{0}px)'.format(this.layer * _layerDepth);
+        this.update = function() {
+            this.element.style.transform = 'translate3d(0px,0px,{0}px)'.format(this.layer * _layerDepth);
+        }
+        this.update();
         
         this.getElement = function() {
             return this.element;
