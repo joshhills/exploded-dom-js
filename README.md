@@ -44,9 +44,6 @@ trigger
 
 *Absolute positioning of these elements may prevent unexpected behaviour.*
 
-### Initialisation
-`ExplodedDOMJS.initialise(optionalOptions)`
-
 ### Options
 
 Initialise takes an **object** containing options that affect how the DOM elements should appear and animate. They have sensible defaults, and there are also accessor methods.
