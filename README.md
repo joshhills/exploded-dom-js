@@ -9,7 +9,7 @@
 
 ## [Demo](https://joshhills.github.io/exploded-dom-js)
 
-![Example Gif](https://joshhills.github.io/exploded-dom-js/img/ed-example.gif "Demo")
+![Example Gif](https://joshhills.github.io/exploded-dom-js/img/edjs-example.gif "Demo")
 
 ## How to use?
 

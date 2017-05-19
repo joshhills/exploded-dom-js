@@ -210,6 +210,8 @@ const ExplodedDOMJS = (function() {
         setChildClass:  setChildClass,
         getParents:     getParents,
         getChildren:    getChildren,
+        getLayerDepth:  getLayerDepth,
+        setLayerDepth:  setLayerDepth,
         getMaxPitch:    getMaxPitch,
         setMaxPitch:    setMaxPitch,
         getMaxYaw:      getMaxYaw,
