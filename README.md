@@ -5,9 +5,11 @@
 
 ## How to include?
 
-`npm install exploded-dom`
+`npm install exploded-dom-js`
 
 ## [Demo](https://joshhills.github.io/exploded-dom-js)
+
+![Example Gif](https://joshhills.github.io/exploded-dom-js/img/ed-example.gif "Demo")
 
 ## How to use?
 
