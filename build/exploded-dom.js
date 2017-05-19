@@ -17,7 +17,7 @@ const ExplodedDOMJS = (function() {
         _childClass   = 'ed-child-',
         _maxPitch     = 10,
         _maxYaw       = 40,
-        _layerGap     = 20,
+        _layerDepth   = 20,
         _parents      = [],
         _children     = [];
 
@@ -92,7 +92,7 @@ const ExplodedDOMJS = (function() {
                 }
             }
         })();
-        this.element.style.transform = 'translate3d(0px,0px,{0}px)'.format(this.layer * _layerGap);
+        this.element.style.transform = 'translate3d(0px,0px,{0}px)'.format(this.layer * _layerDepth);
         
         this.getElement = function() {
             return this.element;
@@ -116,6 +116,9 @@ const ExplodedDOMJS = (function() {
                 }
                 if(options.maxYaw != null) {
                     setMaxYaw(options.maxYaw);
+                }
+                if(options.layerDepth != null) {
+                    setLayerDepth(options.layerDepth);
                 }
             }
         }
@@ -170,14 +173,14 @@ const ExplodedDOMJS = (function() {
     function getChildren() {
         return _children;
     }
-    function getLayerGap() {
-        return _layerGap;
+    function getLayerDepth() {
+        return _layerDepth;
     }
-    function setLayerGap(layerGap) {
-        if(isNaN(layerGap)) {
+    function setLayerDepth(layerDepth) {
+        if(isNaN(layerDepth)) {
             throw Error('Argument must be of type \'number\'');
         }
-        _layerGap = Math.abs(layerGap);
+        _layerDepth = Math.abs(layerDepth);
     }
     function getMaxPitch() {
         return _maxPitch;
