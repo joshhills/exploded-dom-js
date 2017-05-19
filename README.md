@@ -61,3 +61,7 @@ Initialise takes an **object** containing options that affect how the DOM elemen
 |Method|Description|
 |`getParents`|Returns all parent views.|
 |`getChildren`|Returns all child view.|
+
+---
+
+Distributed under MIT license (see LICENSE), 2017, Josh Hills
