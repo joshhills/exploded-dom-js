@@ -6,7 +6,7 @@
 `npm install exploded-dom`
 
 ## Demo
-TBD - There is one present in the folder.
+TBD - There is one present in the repository.
 
 ## How to use?
 
