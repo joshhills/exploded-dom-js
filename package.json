@@ -1,0 +1,27 @@
+{
+  "name": "exploded-dom-js",
+  "version": "1.0.0",
+  "description": "A lightweight library to add 3D effects to HTML elements.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshHills/exploded-dom-js.git"
+  },
+  "keywords": [
+    "css",
+    "3d",
+    "dom",
+    "hover",
+    "effect",
+    "animation"
+  ],
+  "author": "Josh Hills",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoshHills/exploded-dom-js/issues"
+  },
+  "homepage": "https://github.com/JoshHills/exploded-dom-js#readme"
+}

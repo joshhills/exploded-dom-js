@@ -1,0 +1,198 @@
+<html>
+    <head>
+        <!-- Meta Information -->
+        <title>
+            Exploded DOM Demo
+        </title>
+        <!-- Styling/Includes -->
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Open+Sans" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Open Sans', sans-serif;
+                background-color: #222;
+                margin: 0;
+                padding: 0;
+                color: #fff;
+            }
+            .wrapper {
+                max-width: 960px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: #333;
+            }
+            header {
+                background-color: #444;
+                font-family: 'Bungee Shade';
+                font-size: 2rem;
+                padding: 50px;
+            }
+            h1 {
+                margin: 0;
+            }
+            hr {
+                width: 100px;
+                margin: 10px 0 0 0;
+                border: 2px solid #fff;
+                background-color: #fff;
+            }
+            main {
+                padding: 50px;
+            }
+            /* Demo */
+            .container {
+                position: relative;
+                overflow: hidden;
+                height: 500px;
+
+                margin-bottom: 50px;
+            }
+            .ed-parent {
+                transform-origin: center center;
+                transform-style: preserve-3d;
+                perspective: 500px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .ed-trigger {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            [class^="ed-child-"] {
+                transform-style: preserve-3d;
+                opacity: 0.5;
+                position: absolute;
+            }
+            [class^="ed-child-"]:hover {
+                opacity: 0.7;
+            }
+            img { 
+                max-width: 100%;
+            }
+            #c1 {
+                top: 10%;
+                left: 8%;
+            }
+            #c2 {
+                top: 12.5%;
+                left: 8%;
+            }
+            #c3 {
+                top: 24%;
+                left: 22%;
+            }
+            #c4 {
+                top: 22%;
+                left: 22%;
+            }
+            #c5 {
+                top: 40%;
+                left: 23%;
+            }
+            #c6 {
+                top: 17%;
+                left: 65%;
+            }
+            #c7 {
+                top: 17%;
+                left: 72.5%;
+            }
+            #c8 {
+                top: 17%;
+                left: 80%;
+            }
+            #c9 {
+                top: 30%;
+                left: 60%;
+                width: 20%;
+            }
+            #c10 {
+                top: 48%;
+                left: 60%;
+                width: 20%;
+            }
+        </style>
+        <script type="text/javascript" src="exploded-dom.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>
+                    Exploded DOM JS
+                </h1>
+            </header>
+            <main>
+                <div class="container">
+                    <div class="ed-trigger">
+                        <div class="ed-parent">
+                        <div id="c1" class="ed-child-1">
+                            <img src="img/example-layer-1.jpg" />
+                        </div>
+                        <div id="c2" class="ed-child-2">
+                            <img src="img/example-layer-2.jpg" />
+                        </div>
+                        <div id="c3" class="ed-child-3">
+                            <img src="img/example-layer-3.png" />
+                        </div>
+                        <div id="c4" class="ed-child-4">
+                            <img src="img/example-layer-4.jpg" />
+                        </div>
+                        <div id="c5" class="ed-child-5">
+                            <img src="img/example-layer-5.jpg" />
+                        </div>
+                        <div id="c6" class="ed-child-3">
+                            <img src="img/example-layer-6.jpg" />
+                        </div>
+                        <div id="c7" class="ed-child-3">
+                            <img src="img/example-layer-6.jpg" />
+                        </div>
+                        <div id="c8" class="ed-child-3">
+                            <img src="img/example-layer-6.jpg" />
+                        </div>
+                        <div id="c9" class="ed-child-2">
+                            <p>
+                                Improve the way you convey your concepts. 
+                            </p>
+                        </div>
+                        <div id="c10" class="ed-child-4">
+                            <p>
+                                Motion indicates better than a flat image how a proposal fits together.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <hr />
+                <h3>
+                    A light-weight library that adds simple, interactive 3D layering effects to HTML elements based on the cursor position.
+                </h3>
+                <h3>
+                    Download
+                </h3>
+                <p>
+                    TODO
+                </p>
+                <h3>
+                    How to use...
+                </h3>
+                <p>
+                    To the element containing the item(s) you wish to add the effect to, add the class <code>ed-parent</code>.
+                </p>
+                <p>
+                    To the element(s) that you wish to animate, add the class <code>ed-child-z</code>, with <code>z</code> denoting their depth as an index.
+                </p>
+            </main>
+        </div>
+        <!-- Initialise -->
+        <script>
+            (function() {
+                ExplodedDOMJS.initialise();
+            })();
+        </script>
+    </body>
+</html>
