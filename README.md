@@ -13,9 +13,9 @@
 
 ## How to use?
 
-`ExplodedDOMJS.initialise(options)`
+`ExplodedDOMJS.initialise(options, parent)`
 
-You can have multiple exploded views on the same page. The benefit of this library over a traditional canvas-based one is that the display elements are not obfuscated into a rendering pipeline, but instead leverages CSS 3D transformations ([see support](https://www.w3schools.com/css/css3_3dtransforms.asp)) on regular HTML elements, meaning you can allow any content to animate.
+You can have multiple exploded views on the same page. The benefit of this library over a traditional canvas-based one is that the display elements are not obfuscated into a rendering pipeline, but instead leverage CSS 3D transformations ([see support](https://www.w3schools.com/css/css3_3dtransforms.asp)) on regular HTML elements.
 
 ### Structure
 #### Parents
@@ -40,22 +40,31 @@ trigger
 
 ### Style
 
-**Parents** should have a `transform-origin` and `perspective`, both **parents** and **children** should have `transform-style: preserve-3d`. These will default in CSS.
+For 3D effects, **Parents** should have a `transform-origin` and `perspective`, both **parents** and **children** should have `transform-style: preserve-3d`. These will default in CSS.
 
-*Absolute positioning of these elements may prevent unexpected behaviour.*
+*Absolute positioning of these elements will help prevent unexpected behaviour.*
 
 ### Options
 
-Initialise takes an **object** containing options that affect how the DOM elements should appear and animate. They have sensible defaults, and there are also accessor methods.
+Initialise takes an optional **object** containing options that affect how the DOM elements should appear and animate. There are accessor methods for all of the fields of these classes (let your IDE do its magic!).
+
+There are also some templates for options at `ExplodedDOMJS.SETTINGS.`:
+* DEFAULT
+* PARALLAX_X
+* PARALLAX_Y
 
 Field|Type|Default|Description
 ---|---|---|---
-`parentsClass`|string|`'ed-parent'`|The class name identifying parent containers.
 `triggerClass`|string|`'ed-trigger'`|The class name identifying triggers for mouse events to nested parents.
+`parentsClass`|string|`'ed-parent'`|The class name identifying parent containers.
 `childClass`|string|`'ed-child'`|The class name identifying children of parents.
-`maxPitch`|number|`10`|The maximum amount of vertical rotation in degrees to pitch a parent view.
-`maxYaw`|number|`40`|The maximum amount of horizontal rotation in degrees to pitch a parent view.
+`maxRotateY`|number|`10`|The maximum amount of vertical rotation in degrees to pitch a parent view.
+`maxRoateX`|number|`-20`|The maximum amount of horizontal rotation in degrees to yaw a parent view.
+`maxSlideY`|number|`0`|The maximum amount of vertical translation in pixels to move children within a parent view.
+`maxSlideX`|number|`0`|The maximum amount of vertical translation in pixels to move children within a parent view.
 `layerDepth`|number|`20`|The pixel value denoting the gap between layers (higher produces more extreme effect).
+`is3d`|boolean|true|Allow translation of child elements along the z axix.
+`animate`|boolean|true|Allow animation of element.
 
 ### Other Useful Methods
 
