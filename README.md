@@ -63,7 +63,7 @@ Field|Type|Default|Description
 `maxSlideY`|number|`0`|The maximum amount of vertical translation in pixels to move children within a parent view.
 `maxSlideX`|number|`0`|The maximum amount of vertical translation in pixels to move children within a parent view.
 `layerDepth`|number|`20`|The pixel value denoting the gap between layers (higher produces more extreme effect).
-`is3d`|boolean|true|Allow translation of child elements along the z axix.
+`is3d`|boolean|true|Allow translation of child elements along the z-axis.
 `animate`|boolean|true|Allow animation of element.
 
 ### Other Useful Methods
