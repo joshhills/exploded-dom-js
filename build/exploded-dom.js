@@ -61,7 +61,9 @@ const ExplodedDOMJS = (function() {
             var _this = this;
             (this.trigger ? this.trigger : this.element)
                 .addEventListener('mousemove', function(e) {
-                    _this.update(e);
+                    if(_this.options.animate) {
+                        _this.update(e);
+                    }
                 });
         }
         this.stop = function() {
@@ -227,6 +229,12 @@ const ExplodedDOMJS = (function() {
         _addEventListeners();
     }
     
+    function _updateAll() {
+        Array.prototype.forEach.call(_parents, function(p) {
+           p.update(); 
+        });
+    }
+    
     function getParentClass() {
         return _parentClass;
     }
@@ -236,6 +244,7 @@ const ExplodedDOMJS = (function() {
         } else {
             _globalOptions.parentsClass = parentClass;
         }
+        _updateAll();
     }
     function getTriggerClass() {
         return _triggerClass;
@@ -246,6 +255,7 @@ const ExplodedDOMJS = (function() {
         } else {
             _globalOptions.triggerClass = triggerClass;
         }
+        _updateAll();
     }
     function getChildClass() {
         return _childClass;
@@ -256,6 +266,7 @@ const ExplodedDOMJS = (function() {
         } else { 
             _globalOptions.childClass = childClass;
         }
+        _updateAll();
     }
     function getParents() {
         return _parents;
@@ -275,6 +286,7 @@ const ExplodedDOMJS = (function() {
         } else { 
             _globalOptions.layerScale = layerScale;
         }
+        _updateAll();
     }
     function getMaxRotateY() {
         return _maxRotateY;
@@ -288,6 +300,7 @@ const ExplodedDOMJS = (function() {
         } else { 
             _globalOptions.maxRotateY = maxRotateY;
         }
+        _updateAll();
     }
     function getMaxRotateX() {
         return _maxRotateX;
@@ -301,6 +314,7 @@ const ExplodedDOMJS = (function() {
         } else { 
             _globalOptions.maxRotateX = maxRotateX;
         }
+        _updateAll();
     }
     function getMaxSlideX() {
         return _maxSlideX;
@@ -314,6 +328,7 @@ const ExplodedDOMJS = (function() {
         } else { 
             _globalOptions.maxSlideX = maxSlideX;
         }
+        _updateAll();
     }
     function getMaxSlideY() {
         return _maxSlideY;
@@ -327,6 +342,7 @@ const ExplodedDOMJS = (function() {
         } else { 
             _globalOptions.maxSlideY = maxSlideY;
         }
+        _updateAll();
     }
     function getAnimate() {
         return _animate;
@@ -337,6 +353,7 @@ const ExplodedDOMJS = (function() {
         } else { 
             _globalOptions.animate = animate;
         }
+        _updateAll();
     }
     function get3d() {
         return _globalOptions.is3d;
@@ -347,6 +364,7 @@ const ExplodedDOMJS = (function() {
         } else { 
             _globalOptions.is3d = is3d;
         }
+        _updateAll();
     }
     
     return {

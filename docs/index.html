@@ -183,16 +183,32 @@
                         Tweak me!
                     </h2>
                     <div class="input-group">
-                        <p>Max Pitch</p>
-                        <input type="range" id="maxPitch" value="20" min="0" max="360" onchange="ExplodedDOMJS.setMaxPitch(this.value)">
+                        <p>Max Rotate Y</p>
+                        <input type="range" id="maxPitch" value="10" min="-180" max="180" onchange="ExplodedDOMJS.setMaxRotateY(this.value)">
                     </div>
                     <div class="input-group">
-                        <p>Max Yaw</p>
-                        <input type="range" id="maxYaw" value="20" min="0" max="360" onchange="ExplodedDOMJS.setMaxYaw(this.value)">
+                        <p>Max Rotate X</p>
+                        <input type="range" id="maxYaw" value="-20" min="-180" max="180" onchange="ExplodedDOMJS.setMaxRotateX(this.value)">
+                    </div>
+                    <div class="input-group">
+                        <p>Max Slide Y</p>
+                        <input type="range" id="maxYaw" value="-0" min="-100" max="100" onchange="ExplodedDOMJS.setMaxSlideY(this.value)">
+                    </div>
+                    <div class="input-group">
+                        <p>Max Slide X</p>
+                        <input type="range" id="maxYaw" value="-0" min="-100" max="100" onchange="ExplodedDOMJS.setMaxSlideX(this.value)">
+                    </div>
+                    <div class="input-group">
+                        <p>Animate</p>
+                        <input type="checkbox" id="maxYaw" checked="true" onclick="ExplodedDOMJS.setAnimate(this.checked)">
+                    </div>
+                    <div class="input-group">
+                        <p>3D</p>
+                        <input type="checkbox" id="maxYaw" checked="true" onclick="ExplodedDOMJS.set3d(this.checked)">
                     </div>
                     <div class="input-group">
                         <p>Layer Depth</p>
-                        <input type="range" id="layerDepth" value="20" min="0" max="100" onchange="ExplodedDOMJS.setLayerDepth(this.value)">
+                        <input type="range" id="layerDepth" value="20" min="-100" max="100" onchange="ExplodedDOMJS.setLayerDepth(this.value)">
                     </div>
                 </div>
                 <hr />
