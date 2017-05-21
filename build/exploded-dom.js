@@ -377,6 +377,7 @@ const ExplodedDOMJS = (function() {
         getParents:     getParents,
         getChildren:    getChildren,
         getLayerScale:  getLayerScale,
+        setLayerScale:  setLayerScale,
         getMaxRotateY:  getMaxRotateY,
         setMaxRotateY:  setMaxRotateY,
         getMaxRotateX:  getMaxRotateX,
