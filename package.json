@@ -1,6 +1,6 @@
 {
   "name": "exploded-dom-js",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "A lightweight library to add 3D effects to HTML elements.",
   "main": "index.js",
   "scripts": {
