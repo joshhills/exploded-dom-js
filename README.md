@@ -1,5 +1,5 @@
 # exploded-dom-js
- A light-weight JavaScript glibrary that adds simple, interactive 3D layering effects to HTML elements based on the cursor position.
+A light-weight JavaScript library that adds simple, interactive 3D layering effects to HTML elements based on the cursor position.
 
 [![NPM](https://nodei.co/npm/exploded-dom-js.png)](https://npmjs.org/package/exploded-dom-js)
 
@@ -48,7 +48,7 @@ For 3D effects, **Parents** should have a `transform-origin` and `perspective`, 
 
 Initialise takes an optional **object** containing options that affect how the DOM elements should appear and animate. There are accessor methods for all of the fields of these classes (let your IDE do its magic!).
 
-There are also some templates for options at `ExplodedDOMJS.SETTINGS.`:
+There are also some templates for options in `ExplodedDOMJS.SETTINGS`:
 * DEFAULT
 * PARALLAX_X
 * PARALLAX_Y
